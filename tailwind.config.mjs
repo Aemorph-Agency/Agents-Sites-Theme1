@@ -10,6 +10,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        btn100: "var(--btn-100)",
+        clr100: "var(--clr-100)",
+        clr200: "var(--clr-200)",
+        clr300: "var(--clr-300)",
       },
     },
   },
