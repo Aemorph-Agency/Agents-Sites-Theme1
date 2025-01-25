@@ -14,6 +14,7 @@ export default {
         clr100: "var(--clr-100)",
         clr200: "var(--clr-200)",
         clr300: "var(--clr-300)",
+        clr400: "var(--clr-400)",
       },
     },
   },
