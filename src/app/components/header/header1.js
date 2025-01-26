@@ -4,15 +4,15 @@ import LinkButton from "@/app/widgets/LinkButton"
 const Header= ()=>{
 
     return(
-        <div>
+        <>
             <HeaderOne/>
-        </div>
+        </>
     )
 }
 
 const HeaderOne =()=>{
     return(
-        <header>
+        <header className="sticky top-0 h-[100px] -mb-[100px] z-50">
             <div className="container">
                 <div className="header-wrapper flex flex-nowrap justify-between py-[31px]">
                     <div className="headerlogo">
@@ -40,7 +40,7 @@ const HeaderNavMenu = ()=>{
         <nav>
             <ul className="top-menu list-none flex gap-[45px]">
                 <li>
-                    <div className="flex gap-[10px] items-center">
+                    <div className="has-submenu flex gap-[10px] items-center">
                         <a className="text-[13px] uppercase font-semibold">Condos in singapore</a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
   <path d="M12.5 6L8.5 10L4.5 6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

@@ -36,3 +36,10 @@ section,header,footer{
   padding-left: 20px;
   padding-right: 20px;
 }
+
+#banner.stl1{
+  background-image: url(./assets/images/banner1_hero-bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
