@@ -12,6 +12,10 @@
   --clr-400:#182A37;
   --pagewidth:1320px;
   font-family: var(--font-inter), sans-serif;
+
+  --animate-delay:0.5s;
+
+  
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -29,6 +33,7 @@ body {
 
 .container{
   max-width: var(--pagewidth);
+  width:100%;
   margin: auto;
 }
 section,header,footer{
@@ -43,3 +48,8 @@ section,header,footer{
   background-repeat: no-repeat;
   background-size: cover;
   }
+.banner-wrapper{
+  max-width: var(--pagewidth);
+  width:100%;
+  margin: auto;
+}
