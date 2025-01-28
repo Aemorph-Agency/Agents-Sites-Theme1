@@ -17,7 +17,7 @@ const HeaderOne =()=>{
                 <div className="header-wrapper flex flex-nowrap justify-between py-[31px]">
                     <div className="headerlogo">
                         <div className="sitelogo flex flex-col justify-start">
-                            <p className="text-2xl text-clr400 font-bold">Elizabeth Doe</p>
+                            <div className="text-2xl text-clr400 font-bold">Elizabeth Doe</div>
                             <span className="text-xs text-clr400">Properties in Singapore</span>
                         </div>
                     </div>

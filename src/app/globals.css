@@ -10,6 +10,9 @@
   --clr-200:#16387A;
   --clr-300:#224891;
   --clr-400:#182A37;
+  --clr-500:#F2F4F6;
+  --clr-600:#D8E5FF;
+  --clr-700:#E6EBEF;
   --pagewidth:1320px;
   font-family: var(--font-inter), sans-serif;
 
@@ -52,4 +55,21 @@ section,header,footer{
   max-width: var(--pagewidth);
   width:100%;
   margin: auto;
+}
+.filter-wrapper{
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(37.5px);
+}
+
+select:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: none;
+}
+
+.condos-grid-box .details{
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(74, 74, 74, 0.20);
+  backdrop-filter: blur(10px);
+}
+p{
+  margin-bottom: 1em;
 }
