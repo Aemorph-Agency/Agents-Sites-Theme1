@@ -1,0 +1,20 @@
+.divider{
+    background: rgba(10, 39, 96, 0.20);
+}
+.socials > div{
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        background: rgba(255, 255, 255, 0.50);
+        backdrop-filter: blur(10px);
+}
+.footer-endmenu{
+    border-radius: 99px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(10px);
+}
+footer{
+    background-image: url(../assets/images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}

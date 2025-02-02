@@ -13,6 +13,10 @@
   --clr-500:#F2F4F6;
   --clr-600:#D8E5FF;
   --clr-700:#E6EBEF;
+  --clr-800:#8B949E;
+  --clr-900:#D3D6DB;
+  --clr-1000:#EBEFF2;
+  --clr-1100:#5D6B77;
   --pagewidth:1320px;
   font-family: var(--font-inter), sans-serif;
 
@@ -73,3 +77,6 @@ select:focus-visible, input:focus-visible, textarea:focus-visible {
 p{
   margin-bottom: 1em;
 }
+
+
+

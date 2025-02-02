@@ -18,7 +18,7 @@ function UseButton(props){
 
 const SimpleButton=(props)=>{
     return(
-        <a href={props.buttonlink} className={`${buttonSize(props.size)} ${props.color} w-fit flex items-center justify-center bg-btn100 rounded-full`}>
+        <a href={props.buttonlink} className={`${buttonSize(props.size)} ${props.color} ${props.borderRadiusClass} w-fit flex items-center justify-center bg-btn100`}>
             {props.text}
         </a>
     )
@@ -27,7 +27,7 @@ const SimpleButton=(props)=>{
 
 const ButtonWithIcon=(props)=>{
     return(
-        <a href={props.buttonlink} className={`${buttonSize(props.size)} ${props.color} w-fit flex items-center justify-center bg-btn100 rounded-full`}>
+        <a href={props.buttonlink} className={`${buttonSize(props.size)} ${props.color} ${props.borderRadiusClass} w-fit flex items-center justify-center bg-btn100`}>
             <div className="flex gap-[14px] items-center justify-center">
             {props.text}
             {props.icon && <Icons iconName={props.icon} />}

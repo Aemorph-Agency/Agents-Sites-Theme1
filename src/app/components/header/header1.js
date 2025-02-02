@@ -26,7 +26,7 @@ const HeaderOne =()=>{
                         <HeaderNavMenu/>
                     </div>
 
-                    <LinkButton buttonlink="#" text="Contact Me" size="sm" color="text-white"/>
+                    <LinkButton buttonlink="#" text="Contact Me" size="sm" color="text-white" borderRadiusClass="rounded-full"/>
 
                 </div>
             </div>

@@ -1,0 +1,21 @@
+.accordion-container .acc-block:not(:last-child){
+    border-bottom: 1px solid var(--clr-900);
+}
+.acc-content p:last-child{
+    margin:0;
+}
+.faq-wrapper{
+    backdrop-filter: blur(25px);
+}
+.acc-content{
+    max-height: 0px;
+    overflow: hidden;
+    margin-top: 0px;
+}
+.acc-block.open .acc-content{
+    max-height: 3000px;
+    margin-top: 30px;
+}
+.acc-block.open .acc-indicator{
+    transform: rotate(180deg);
+}

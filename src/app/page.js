@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Header from "./components/header/header1";
 
@@ -23,13 +25,16 @@ import resale3 from "@/app/assets/images/resale-3.jpg";
 import PropertyGridCard from "./components/propertyGridCard";
 import Icons from "./components/icons";
 import GridItem from "./components/list-block-item";
+import Testimonials from "./components/testimonial-carousel";
+import Accordion from "./components/accordion";
+import BlogSingleViewBlock from "./widgets/blog-singleview-block";
 
 
 
 export default function Home() {
   return (
     <>
-      <Header/>
+   
       
       <section id="banner" className="stl1 min-h-[800px] pt-[100px] relative overflow-hidden">
             <div className="container">
@@ -73,7 +78,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-[60px] m-auto w-fit">
-                <LinkButton buttonlink="#" icon="arrowright" text="View All Launches" size="md" color="text-white"/>
+                <LinkButton buttonlink="#" icon="arrowright" text="View All Launches" size="md" color="text-white" borderRadiusClass="rounded-full"/>
                 </div>
 
             </div>
@@ -92,7 +97,7 @@ export default function Home() {
             </div>
 
             <div className="mt-[60px] m-auto w-fit">
-                <LinkButton buttonlink="#" icon="arrowright" text="View All Resale Properties" size="md" color="text-white"/>
+                <LinkButton buttonlink="#" icon="arrowright" text="View All Resale Properties" size="md" color="text-white" borderRadiusClass="rounded-full"/>
             </div>
 
         </div>
@@ -150,7 +155,7 @@ export default function Home() {
                 <p>Having closed hundreds of deals, I stay informed on market trends to offer the best strategies for buying, selling, or renting. My goal is to make your real estate journey smooth and successful.</p>
 
                <div className="mt-4">
-               <LinkButton buttonlink="#" text="Learn More" size="sm" color="text-white" icon="arrowright"/>
+               <LinkButton buttonlink="#" text="Learn More" size="sm" color="text-white" icon="arrowright" borderRadiusClass="rounded-full"/>
                </div>
               </div>
              
@@ -207,10 +212,67 @@ export default function Home() {
 
 
 
-    <section className="pt-[131px] pb-[131px]">
+    <section className="pt-[131px]">
         <div className="container">
-            <h2 className=" mb-[60px] text-xl font-bold text-black opacity-[0.60] leading-normal uppercase tracking-[4px]">areas</h2>
-            
+            <h2 className=" mb-[60px] text-xl font-bold text-black opacity-[0.60] leading-normal uppercase tracking-[4px] text-center">client testimonials</h2>
+        </div>
+    </section>
+    <section className="pb-[131px]">
+    <Testimonials/>
+    </section>
+    <section className="pt-20 pb-20">
+        <div className="container bg-clr1000 rounded-[40px] px-20 py-[75px]">
+            <div className="faq-wrapper  max-w-[900px] m-auto">
+            <h2 className="text-5xl -tracking-[0.96px] font-black mb-7">FAQ</h2>
+            <div className="accordion-container">
+                    <Accordion 
+                    title="Lorem ipsum dolor sit amet consectetur labor quis hendrerit"
+                    content={
+                        <>
+                          <p>Lorem ipsum dolor sit amet consectetur. Nec nullam velit arcu egestas. Varius tristique ullamcorper id bibendum. Nunc ut tortor sapien elementum. Posuere dui nulla porta risus malesuada. In morbi ut dolor nec id. Quis venenatis diam posuere mi mauris. Purus a urna odio enim lacus mi quisque. Sed nulla purus aenean suscipit dui gravida ac. </p>
+                <p>Mauris phasellus at cursus aenean. Eget eu hendrerit lacus libero aliquam. Nibh erat dignissim viverra convallis habitant cras. Scelerisque feugiat nibh commodo enim. Ac integer commodo lobortis magna viverra bibendum malesuada imperdiet ullamcorper.</p>
+           
+                        </>
+                    }
+                    />
+                        <Accordion 
+                    title="Lorem ipsum dolor sit amet consectetur labor quis hendrerit"
+                    content={
+                        <>
+                          <p>Lorem ipsum dolor sit amet consectetur. Nec nullam velit arcu egestas. Varius tristique ullamcorper id bibendum. Nunc ut tortor sapien elementum. Posuere dui nulla porta risus malesuada. In morbi ut dolor nec id. Quis venenatis diam posuere mi mauris. Purus a urna odio enim lacus mi quisque. Sed nulla purus aenean suscipit dui gravida ac. </p>
+                <p>Mauris phasellus at cursus aenean. Eget eu hendrerit lacus libero aliquam. Nibh erat dignissim viverra convallis habitant cras. Scelerisque feugiat nibh commodo enim. Ac integer commodo lobortis magna viverra bibendum malesuada imperdiet ullamcorper.</p>
+           
+                        </>
+                    }
+                    />
+                        <Accordion 
+                    title="Lorem ipsum dolor sit amet consectetur labor quis hendrerit"
+                    content={
+                        <>
+                          <p>Lorem ipsum dolor sit amet consectetur. Nec nullam velit arcu egestas. Varius tristique ullamcorper id bibendum. Nunc ut tortor sapien elementum. Posuere dui nulla porta risus malesuada. In morbi ut dolor nec id. Quis venenatis diam posuere mi mauris. Purus a urna odio enim lacus mi quisque. Sed nulla purus aenean suscipit dui gravida ac. </p>
+                <p>Mauris phasellus at cursus aenean. Eget eu hendrerit lacus libero aliquam. Nibh erat dignissim viverra convallis habitant cras. Scelerisque feugiat nibh commodo enim. Ac integer commodo lobortis magna viverra bibendum malesuada imperdiet ullamcorper.</p>
+           
+                        </>
+                    }
+                    />
+                  
+           </div>
+            </div>
+        </div>
+    </section>
+
+    <section className="pt-[90px] pb-[120px]">
+        <div className="container">
+            <div className="flex justify-between mb-[55px]">
+                <h2 className="font-black text-5xl -tracking-[0.96px] ">Real Estate Insights</h2>
+                <LinkButton buttonlink="#" text="View All" size="sm" color="text-white" icon="arrowright" borderRadiusClass="rounded-[10px]"/>
+            </div>
+            <div className="grid grid-cols-3 gap-6">
+                    <BlogSingleViewBlock date="20 Dec 2024" title="Lorem ipsum dolor sit amet consectetur labor quis hendrerit"/>
+                    <BlogSingleViewBlock date="20 Dec 2024" title="Lorem ipsum dolor sit amet consectetur labor quis hendrerit"/>
+                    <BlogSingleViewBlock date="20 Dec 2024" title="Lorem ipsum dolor sit amet consectetur labor quis hendrerit"/>
+
+            </div>
         </div>
     </section>
     </>
