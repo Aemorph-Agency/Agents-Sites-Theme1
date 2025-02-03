@@ -1,0 +1,26 @@
+.toc{
+    border: 1px solid rgba(35, 67, 128, 0.07);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(25px);
+}
+.toc-item{
+    border: 1px solid transparent;
+}
+.toc-item span{
+    color: rgba(84, 142, 255, 0.30);
+    margin-right: 4px;
+}
+.toc-item.active{
+    border: 1px solid rgba(84, 142, 255, 0.50);
+}
+.toc-item.active span{
+    color: var(--clr-100);
+}
+#condo-article p{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.18px;
+}
