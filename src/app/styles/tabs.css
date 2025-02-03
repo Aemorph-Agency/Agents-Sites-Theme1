@@ -1,0 +1,18 @@
+.tabhead{
+    padding-bottom: 20px;   
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.tabsButtons::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: -21px;
+    width:100%;
+    height: 1px;
+    background-color: black;
+    opacity: 0;
+    transition: inherit;
+}
+.tabsButtons.active::after{
+    opacity: 1;
+}
