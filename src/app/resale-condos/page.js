@@ -43,14 +43,23 @@ export default function Condos(){
         <section className="pt-[100px]">
            <div className="container">
 
-                <div className="breadcrumbs flex gap-[15px] items-center mt-[50px] mb-4">
-                    <Icons iconName="house"/>
-                    /
-                    <a className="text-sm leading-[150%] font-normal">Properties for Resale</a>
-                    /
-                    <a className="text-sm leading-[150%] font-normal">{bcTitle}</a>
+              <div className="flex justify-between gap-5 mt-[50px] mb-4">
+                <div className="flex-1">
+                    <div className="breadcrumbs flex gap-[15px] items-center">
+                        <Icons iconName="house"/>
+                        /
+                        <a className="text-sm leading-[150%] font-normal">Properties for Resale</a>
+                        /
+                        <a className="text-sm leading-[150%] font-normal">{bcTitle}</a>
+                    </div>
+                    <h2 className="text-[64px] font-black leading-[100%] -tracking-[2.56px]">{pt}</h2>
                 </div>
-                <h2 className="text-[64px] font-black leading-[100%] -tracking-[2.56px]">{pt}</h2>
+                <div className="basis-[500px]">
+                  <p className="text-base text-black leading-[150%] -tracking-[0.16px] font-normal">
+                  Magna risus consectetur nulla pulvinar aliquam aliquam odio faucibus. Mi mi non nisl venenatis. Sagittis lacus et morbi id gravida donec dis ultricies.
+                  </p>
+                </div>
+              </div>
            </div>
         </section>
 

@@ -7,12 +7,13 @@ import agentPic  from '../assets/images/agent-pic.png';
 import '../styles/about.css';
 
 
+
 export default function About(){
 
       
     return(
        <>
-        <section id="about-intro" className="pt-[100px] bg-white pb-[82px] rounded-b-[40px]">
+        <section className="rounded-sec pt-[100px] bg-white pb-[82px] rounded-b-[40px]">
            <div className="container">
 
            <div className="breadcrumbs flex gap-[15px] items-center mt-[50px] mb-4">

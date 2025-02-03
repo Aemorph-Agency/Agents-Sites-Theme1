@@ -17,6 +17,8 @@
   --clr-900:#D3D6DB;
   --clr-1000:#EBEFF2;
   --clr-1100:#5D6B77;
+  --clr-1200:#848C97;
+
   --pagewidth:1320px;
   font-family: var(--font-inter), sans-serif;
 
@@ -80,3 +82,34 @@ p{
 
 
 
+.rounded-sec{
+  box-shadow: 0px 1px 0px 0px #DDE2E8;
+  }
+  
+.condoListPagination::after{
+  content:"";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-100);
+  border-radius: 999px;
+  opacity: 0;
+  z-index: -1;
+}
+.condoListPagination.active::after{
+  opacity: 1;
+}
+.condoListPagination.active
+{
+  color:#fff;
+}
+
+
+.agent-profile-block{
+    
+  background: linear-gradient(279deg, rgba(84, 142, 255, 0.20) 0%, rgba(84, 142, 255, 0.10) 100%);
+  }
+  
