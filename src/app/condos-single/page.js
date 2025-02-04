@@ -22,7 +22,7 @@ export default function BlogSingle(){
 
                 
                  <div className="mt-[44px] mb-[30px]">
-                 <BannerImageGallery_1/>
+                {selectedBanner(1)}
                  </div>
 
 
@@ -50,6 +50,8 @@ export default function BlogSingle(){
                     <div>
                             <div className="expandable-text">
                                 <p> Watten House stands as a beacon of luxury and sophistication within the esteemed Bukit Timah district. Developed by UOL Group and Singapore Land Group, this freehold condominium offers a rare opportunity for homeowners to own a generational asset in a prestigious address. Boasting 180 luxurious units with spacious layouts and private lifts, Watten House ensures residential bliss and exclusivity for its residents. Its prime location, coupled with seamless connectivity to transportation hubs </p>
+
+                                <p> Watten House stands as a beacon of luxury and sophistication within the esteemed Bukit Timah district. Developed by UOL Group and Singapore Land Group, this freehold condominium offers a rare opportunity for homeowners to own a generational asset in a prestigious address. Boasting 180 luxurious units with spacious layouts and private lifts, Watten House ensures residential bliss and exclusivity for its residents. Its prime location, coupled with seamless connectivity to transportation hubs </p>
                             </div>                   
                     </div>
                 </div>
@@ -64,8 +66,20 @@ export default function BlogSingle(){
 
 }
 
-const 
 
+function selectedBanner(style){
+    if(style == 1){
+        return <BannerImageGallery_1/>
+    }else if(style == 2){
+        return <BannerImageGallery_2/>
+    }else if(style == 3){
+        return <BannerImageGallery_3/>
+    }else if(style == 4){
+        return <BannerImageGallery_4/>
+    }else{
+        return <BannerImageGallery_5/>
+    }
+}
 
 
 const BannerImageGallery_1=()=>{
@@ -89,5 +103,72 @@ const BannerImageGallery_1=()=>{
                 </div>
             </div>
         </div>
+    )
+}
+
+const BannerImageGallery_2=()=>{
+    return(
+        <div className="h-[500px] grid grid-cols-2 gap-6">
+                <div className="relative rounded-[10px] overflow-hidden">
+                    <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0 "/>
+                </div>
+                <div className="relative rounded-[10px] overflow-hidden">
+                    <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0 "/>
+                </div>
+                <div className="relative rounded-[10px] overflow-hidden">
+                    <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0 "/>
+                </div>
+                <div className="relative rounded-[10px] overflow-hidden">
+                    <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0 "/>
+                </div>
+                
+           
+        </div>
+    )
+}
+
+
+const BannerImageGallery_3=()=>{
+    return(
+        <div className="flex gap-6 h-[486px]">
+        <div className="w-1/2 relative overflow-hidden rounded-[10px]">
+            <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0"/>
+        </div>
+        <div className="grid grid-cols-1 gap-6 w-1/2">
+            <div className="relative rounded-[10px] overflow-hidden">
+                <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0 "/>
+            </div>
+            <div className="relative rounded-[10px] overflow-hidden">
+                <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0 "/>
+            </div>
+    
+        </div>
+    </div>
+    )
+}
+
+
+const BannerImageGallery_4=()=>{
+    return(
+        <div className="h-[500px] grid grid-cols-2 gap-6">
+                <div className="relative rounded-[10px] overflow-hidden">
+                    <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0 "/>
+                </div>
+                <div className="relative rounded-[10px] overflow-hidden">
+                    <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0 "/>
+                </div>
+              
+        </div>
+    )
+}
+
+const BannerImageGallery_5=()=>{
+    return(
+        
+                <div className="h-[500px] relative rounded-[10px] overflow-hidden">
+                    <Image src={sampleBlogImage} alt="" className="w-full h-full object-cover absolute left-0 top-0 "/>
+                </div>
+                
+              
     )
 }
