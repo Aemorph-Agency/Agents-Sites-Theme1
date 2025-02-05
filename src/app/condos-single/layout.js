@@ -18,9 +18,9 @@ export const metadata = {
 export default function CondosLayout({ children }) {
   return (
 
-      <>
+      <div className="condosSingle"> 
        {children}
-      </>
+      </div>
         
        
         
