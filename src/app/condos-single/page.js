@@ -17,6 +17,10 @@ import UdsCarousel from "../components/single-condos/unit-ds-carousel";
 import '../styles/rating.css';
 import Accordion from "../components/accordion";
 import LinkButton from "../widgets/LinkButton";
+import '../styles/brochure.css';
+import '../styles/amenities.css';
+import brochureIcon from '../assets/images/brochure-icon.png'
+import brochureImage from '../assets/images/brochure.png'
 
 export default function BlogSingle(){
 
@@ -211,6 +215,23 @@ export default function BlogSingle(){
                                             <p className="text-black leading-[100%] -tracking-[0.48px] font-medium m-0 text-2xl">Spider web goes here</p>
                                         
                                     </div>
+                                </div>
+
+                                <div id="brochure" className="bg-white rounded-[20px] p-10 flex gap-10">
+                                    <div className="w-1/2 flex flex-col items-start gap-[30px] justify-center">
+                                        <Icons iconName="brochure" alt="" width={50} height={64}/>
+                                        <h2 className="text-black text-4xl font-semibold -tracking-[0.36px]">Blossoms by the Park Brochure</h2>
+                                        <LinkButton buttonlink="#" icon="download" text="View All Launches" size="md" color="text-white" borderRadiusClass="rounded-[10px]"/>
+                                    
+                                    </div>
+                                    <div className="w-1/2">
+                                        <Image src={brochureImage} alt="" className="w-full h-full object-cover"/>
+                                    </div>
+                                </div>
+
+                                <div id="amenities">
+                                    <h2 className="text-4xl leading-[100%] -tracking-[0.72px] font-black mb-10">Amenities</h2>
+                                    
                                 </div>
 
                             </div>  
