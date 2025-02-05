@@ -1,0 +1,5 @@
+#reviews-ratings{
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(78, 95, 129, 0.05);
+    backdrop-filter: blur(10px);
+}

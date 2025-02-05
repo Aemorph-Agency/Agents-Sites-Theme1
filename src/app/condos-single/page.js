@@ -14,6 +14,9 @@ import CondoInfoTables from "../components/single-condos/tables";
 import SliderNav from "../components/single-condos/slider-nav";
 import FloorPlansCarousel from "../components/single-condos/floorplans-carousel";
 import UdsCarousel from "../components/single-condos/unit-ds-carousel";
+import '../styles/rating.css';
+import Accordion from "../components/accordion";
+import LinkButton from "../widgets/LinkButton";
 
 export default function BlogSingle(){
 
@@ -172,8 +175,42 @@ export default function BlogSingle(){
                                 </div>
 
 
-                                <div id="reviews" className="rounded-[20px] ">
-
+                                <div id="reviews-ratings" className="rounded-[20px] p-5 flex gap-[15px]">
+                                    <div className="rating-info flex flex-col gap-[10px] basis-[360px]">
+                                        <div className="rounded-[10px] py-5 px-8 text-center" style={{background:'rgba(255, 255, 255, 0.75)'}}>
+                                            <p className="text-black leading-[100%] -tracking-[0.48px] font-medium m-0 text-2xl">Rating:9/10</p>
+                                        </div>
+                                       <div className="px-[30px] rounded-[10px]" style={{background:'rgba(255, 255, 255, 0.75)'}} >
+                                       <Accordion title="👍 The good" content={
+                                            <ul className="list-disc pl-7">
+                                                <li>Efficient and square layout.</li>
+                                                <li>Includes a household shelter for storage.</li>
+                                                <li>Features a service yard for laundry.</li>
+                                                <li>Enclosed kitchen for added privacy.</li>
+                                                <li>Neatly tucked in the main door.</li>
+                                                <li>Master room spacious enough for a king-size bed.</li>
+                                            </ul>
+                                        } />
+                                       </div>
+                                       <div className="px-[30px] rounded-[10px]" style={{background:'rgba(255, 255, 255, 0.75)'}} >
+                                       <Accordion title="👍 The Bad" content={
+                                            <ul className="list-disc pl-7">
+                                                <li>Efficient and square layout.</li>
+                                                <li>Includes a household shelter for storage.</li>
+                                                <li>Features a service yard for laundry.</li>
+                                                <li>Enclosed kitchen for added privacy.</li>
+                                                <li>Neatly tucked in the main door.</li>
+                                                <li>Master room spacious enough for a king-size bed.</li>
+                                            </ul>
+                                        } />
+                                       </div>
+                                       <LinkButton buttonlink="#" icon="arrowright" text="View All Launches" size="md" color="text-white" borderRadiusClass="rounded-[10px] w-full"/>
+                                    </div>
+                                    <div className="rating-web flex-1 rounded-[10px] py-5 px-8 text-center flex items-center justify-center"  style={{background:'rgba(255, 255, 255, 0.75)'}}>
+                                        
+                                            <p className="text-black leading-[100%] -tracking-[0.48px] font-medium m-0 text-2xl">Spider web goes here</p>
+                                        
+                                    </div>
                                 </div>
 
                             </div>  
