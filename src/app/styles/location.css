@@ -1,0 +1,14 @@
+table{
+    width: 100%;
+}
+table tr td{
+    width: 50%;
+}
+table tr:not(:last-child) td{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(93, 107, 119, 0.20);
+}
+table tr:not(:first-child) td{
+    padding-top: 20px;
+   
+}

@@ -24,6 +24,7 @@ import brochureImage from '../assets/images/brochure.png'
 import buImage from '../assets/images/balanced-units.png';
 
 import ecImage from '../assets/images/elevation-chart.png';
+import InfoTables from "../components/single-condos/infoTables";
 
 export default function BlogSingle(){
 
@@ -62,6 +63,49 @@ export default function BlogSingle(){
         {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
         {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
     ];
+
+    const locationTables=[
+        {"title": "Area", "content":"Tanmgli"},
+        {"title": "Neighborhood", "content":"Heart of the city, near Orchard Road shopping belt"},
+        {"title": "Proximity to City Center", "content":"Orchard is a meagre 10-minute drive away, and both the Pan Island Expressway (PIE) and Ayer Rajah Expressway (AYE) are just 15 minutes away."},
+        {"title": "Public Transportation Access", "content":"Within 5 min 3 bustops, Napier MRT station 7 min"},
+        {"title": "MRT Stations", "content":"Napier"},
+        {"title": "Nearby Schools", "content":"SITA Tennis Academy Centre, The Excelerate Program"},
+        {"title": "Local Crime Rate", "content":"TBA"},
+        {"title": "Proximity to Commercial Areas", "content":"Dempsey Hill, Holland Village, Orchard Road"},
+        {"title": "Nearby Parks and Recreation", "content":"Singapore Botanical Gardens (10-min leisure walk)"},
+        {"title": "Proximity to Hospitals", "content":"Gleneagles Hospital, Thomson Medical Centre"},
+        {"title": "View from the Property", "content":"City sky view"},
+        {"title": "Local Property Market Trends", "content":"Expected capital appreciation from Orchard rejuvenation plans"},
+        {"title": "Climate and Weather Patterns", "content":"TBA"},
+        {"title": "Cultural Amenities", "content":"N/A"},
+        {"title": "Dining and Shopping Options", "content":"Tanglin Market Place, Tanglin Mall"},
+        {"title": "Property Tax Rates", "content":"N/A"},
+        {"title": "Historical Significance", "content":"TBA"},
+        {"title": "Environmental Regulations", "content":"TBA"},
+    ];
+
+    const pricingTables=[
+        {"title": "Sale Price", "content":"$1.18M ~ $3.37M"},
+        {"title": "Price per Square Foot", "content":"S$2,129 ~ $2,953"},
+        {"title": "Location-Based Price Variation", "content":"TBA"},
+        {"title": "Pricing Tiers", "content":"TBA"},
+        {"title": "Discounts and Offers", "content":"Contacted"},
+        {"title": "Payment Plan Options", "content":"Stage Payment Under a Standard Payment Scheme (% of Purchase Price) Upon the grant of Option to Purchase 5% (Booking Fee) Upon signing of the Sale & Purchase Agreement or within B weeks from the Option date 20% less Booking Fee Completion of foundation work 10% Completion of reinforced concrete framework of unit 10% Completion of partition walls of unit 5% Completion of roofing/ceiling of unit 5% Completion of door sub-frames/ door frames, window frames, electrical wiring, internal plastering and plumbing of unit 5% Completion of car park, roads and drains serving the housing project 5% Notice of Vacant Possession (TOP) 25% On Completion date 15%"},
+        {"title": "Price Increase Rate", "content":"TBA"},
+        {"title": "Rental Yield", "content":"Calculated"},
+        {"title": "Historical Price Trends", "content":"TBA"},
+        {"title": "Price Comparisons with Similar Units", "content":"One Pearl Bank- $2,494 Sky Everton- $2,591"},
+        {"title": "Financing Options Impact", "content":"TBA"},
+        {"title": "Maintenance Fee Inclusion", "content":"Paid on monthly basis- TBA"},
+        {"title": "Dfeposit required", "content":"TBA"},
+        {"title": "Government Subsidies Impact", "content":"TBA"},
+        {"title": "Market Demand Influence", "content":"N/A"},
+        {"title": "Developer Reputation Impact", "content":"Premium developer: +10% price increase"},
+        {"title": "Project Completion Stage Impact", "content":"TBA"},
+        {"title": "Furnishing and Interior Design Cost", "content":"Furnishing and Interior Design Cost"},
+        {"title": "Tax and Legal Fees", "content":"TBA"},
+    ]
 
 
     const [amenitiesExpanded, setAmenitiesExpanded] = useState(false);
@@ -279,7 +323,7 @@ export default function BlogSingle(){
                                 </div>
 
 
-                                <div id="balancedunits-elevation">
+                                <div id="balancedunits-elevation" className="mt-[60px]">
                                     <div className="grid grid-cols-2 gap-10">
                                         <div className="px-10 py-9 rounded-[20px] bg-white" style={{border:'1px solid rgba(36, 62, 81, 0.10)'}}>
                                             <h2 className="text-[22px] leading-[100%] -tracking-[0.44px] font-semibold mb-5">Balanced Units</h2>
@@ -291,6 +335,18 @@ export default function BlogSingle(){
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div id="location" className="mt-[60px]">
+                                    <h2 className="text-4xl leading-[100%] -tracking-[0.72px] font-black mb-10">Location</h2>
+                                   <InfoTables locationTables={locationTables}/>
+                                </div>
+
+                                <div id="location" className="mt-[60px]">
+                                    <h2 className="text-4xl leading-[100%] -tracking-[0.72px] font-black mb-10">Pricing</h2>
+                                   <InfoTables locationTables={pricingTables}/>
+                                </div>
+
 
                             </div>  
                             <div className="agent-sidebar"></div>               
