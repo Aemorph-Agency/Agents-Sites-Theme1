@@ -113,3 +113,10 @@ p{
   background: linear-gradient(279deg, rgba(84, 142, 255, 0.20) 0%, rgba(84, 142, 255, 0.10) 100%);
   }
   
+
+  .condos-section{
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: linear-gradient(0deg, #FFF 0%, #FFF 100%), rgba(78, 95, 129, 0.05);
+    backdrop-filter: blur(10px);
+  }

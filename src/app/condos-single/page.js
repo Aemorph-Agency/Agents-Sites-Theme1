@@ -19,12 +19,16 @@ import Accordion from "../components/accordion";
 import LinkButton from "../widgets/LinkButton";
 import '../styles/brochure.css';
 import '../styles/amenities.css';
+import '../styles/showflat.css';
 import brochureIcon from '../assets/images/brochure-icon.png'
 import brochureImage from '../assets/images/brochure.png'
 import buImage from '../assets/images/balanced-units.png';
 
 import ecImage from '../assets/images/elevation-chart.png';
 import InfoTables from "../components/single-condos/infoTables";
+import SitePlanCarousel from "../components/single-condos/siteplan-carousel";
+import sitePlanImage from '../assets/images/siteplan.png';
+import VirtualToursCarousel from "../components/single-condos/vt-carousel";
 
 export default function BlogSingle(){
 
@@ -105,8 +109,17 @@ export default function BlogSingle(){
         {"title": "Project Completion Stage Impact", "content":"TBA"},
         {"title": "Furnishing and Interior Design Cost", "content":"Furnishing and Interior Design Cost"},
         {"title": "Tax and Legal Fees", "content":"TBA"},
-    ]
+    ];
 
+    const sitePlanImages=[
+        {"images": sitePlanImage},
+        {"images": sitePlanImage},
+        {"images": sitePlanImage},
+        {"images": sitePlanImage},
+        {"images": sitePlanImage},
+        {"images": sitePlanImage},
+
+    ]; 
 
     const [amenitiesExpanded, setAmenitiesExpanded] = useState(false);
 
@@ -257,7 +270,7 @@ export default function BlogSingle(){
                                         <div className="rounded-[10px] py-5 px-8 text-center" style={{background:'rgba(255, 255, 255, 0.75)'}}>
                                             <p className="text-black leading-[100%] -tracking-[0.48px] font-medium m-0 text-2xl">Rating:9/10</p>
                                         </div>
-                                       <div className="px-[30px] rounded-[10px]" style={{background:'rgba(255, 255, 255, 0.75)'}} >
+                                       <div className="px-[30px] rounded-[10px]" style={{background:'rgba(255, 255, 255, 0.75)' }} >
                                        <Accordion title="👍 The good" content={
                                             <ul className="list-disc pl-7">
                                                 <li>Efficient and square layout.</li>
@@ -347,6 +360,40 @@ export default function BlogSingle(){
                                    <InfoTables locationTables={pricingTables}/>
                                 </div>
 
+                                <div id="showflat" className="p-10 rounded-[20px] flex gap-10 condos-section mt-[60px]">
+                                   <div className="flex-1">
+                                        <h2 className="text-4xl leading-[100%] -tracking-[0.72px] font-black mb-10">Showflat</h2>
+                                                <div className="text-sm font-normal leading-[140%] -tracking-[0.14px]">
+                                                <p>Considering a visit to the 19 Nassim Showflat (Sales Gallery) to assess the quality of finishes, provided appliances, craftsmanship, and layout planning?</p>
+                                                <p>Opting for a SHOWROOM VIEWING with us is the ideal approach to gain deeper insights into this development, allowing you to acquaint yourself with the condo location. Join us to personally experience the layout, furnishings, environment, and more. Don't miss the opportunity to explore your preferred units firsthand.</p>
+                                                </div>
+                                   </div>
+                                   <div className="rounded-[20px] overflow-hidden w-[440px] h-[440px]">
+                                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6517.374410242746!2d103.80174062268152!3d1.2896960122258005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e0!3m2!1sen!2sph!4v1738817586531!5m2!1sen!2sph" width="440" height="440" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="w-full h-full"></iframe>
+                                   </div>
+                                    
+                                </div>
+
+
+                                <div id="siteplant" className="p-10 condos-section mt-[60px]" >
+                                    <div className="flex justify-between gap-5 items-center mb-5">
+                                    <h2 className="text-4xl leading-[100%] -tracking-[0.72px] font-black mb-10">Site Plan</h2>
+                                        <div className="site-plans-nav">
+                                            <SliderNav arrowLeftClass="sitePlansPrev" arrowRightClass="sitePlansNext"/>
+                                        </div>  
+                                    </div>                                     
+                                    <SitePlanCarousel siteplanimages={sitePlanImages}/>
+                                </div>
+
+                                <div id="virtual-tours" className="p-10 condos-section mt-[60px]" >
+                                    <div className="flex justify-between gap-5 items-center mb-5">
+                                    <h2 className="text-4xl leading-[100%] -tracking-[0.72px] font-black mb-10">Virtual Tours</h2>
+                                        <div className="site-plans-nav">
+                                            <SliderNav arrowLeftClass="vtPrev" arrowRightClass="vtNext"/>
+                                        </div>  
+                                    </div>                                     
+                                    <VirtualToursCarousel siteplanimages={sitePlanImages}/>
+                                </div>
 
                             </div>  
                             <div className="agent-sidebar"></div>               
