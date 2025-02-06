@@ -1,0 +1,18 @@
+#amenities{
+    border: 1px solid rgba(36, 62, 81, 0.10);
+background: linear-gradient(0deg, #FFF 0%, #FFF 100%), rgba(78, 95, 129, 0.05)
+}
+.btnblurr{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 58.5%, #FFF 100%);
+}
+.amenities-grid{
+    max-height: 310px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.amenities-grid.expanded{
+    max-height: 5000px;
+}
+.amenities-grid.expanded .btnblurr{
+    background: transparent;
+}

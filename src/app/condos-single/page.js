@@ -21,6 +21,9 @@ import '../styles/brochure.css';
 import '../styles/amenities.css';
 import brochureIcon from '../assets/images/brochure-icon.png'
 import brochureImage from '../assets/images/brochure.png'
+import buImage from '../assets/images/balanced-units.png';
+
+import ecImage from '../assets/images/elevation-chart.png';
 
 export default function BlogSingle(){
 
@@ -40,6 +43,32 @@ export default function BlogSingle(){
         {"dataTitle":"Flooring Material ", "dataContent":"N/A"},
     ];
 
+
+    const amenities=[
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+        {"icon": "pool", "title": "Swimming Pool", "content": "Infinity lap pool, kid's pool"},
+    ];
+
+
+    const [amenitiesExpanded, setAmenitiesExpanded] = useState(false);
+
+    const handleViewAllAmenitiesClick=()=>{
+       setAmenitiesExpanded(!amenitiesExpanded);
+    }
         return(
        <>
        <section className="pt-[100px]">
@@ -229,9 +258,38 @@ export default function BlogSingle(){
                                     </div>
                                 </div>
 
-                                <div id="amenities">
+                                <div id="amenities" className="mt-10 py-9 px-10 bg-white rounded-[20px] relative">
                                     <h2 className="text-4xl leading-[100%] -tracking-[0.72px] font-black mb-10">Amenities</h2>
-                                    
+                                    <div className={`amenities-grid relative pb-20  ${amenitiesExpanded ? 'expanded': ''}`}>
+                                            <div className="grid grid-cols-4 gap-[30px]">
+                                                {amenities.map((amenity, index) => (
+                                                    <div key={index}>
+                                                        <div className="text-clr100 mb-[14px]">
+                                                            <Icons iconName={amenity.icon} alt="" width={36} height={36} />
+                                                        </div>
+                                                        <p className="text-base font-bold mb-1">{amenity.title}</p>
+                                                        <p className="text-sm font-normal leading-[140%] text-clr1100 mb-0">{amenity.content}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            <div className="btnblurr absolute left-0 bottom-0 z-10 w-full h-[190px] flex items-end justify-center transition duration-300 ease-in-out">
+                                                    <button onClick={handleViewAllAmenitiesClick} className=" w-fit flex items-center justify-center bg-btn100 min-h-12 px-6 text-white rounded-[10px] gap-2">View {amenitiesExpanded ? 'Less' : 'More'} Amenities <Icons iconName="caretDown"/></button>
+                                            </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="balancedunits-elevation">
+                                    <div className="grid grid-cols-2 gap-10">
+                                        <div className="px-10 py-9 rounded-[20px] bg-white" style={{border:'1px solid rgba(36, 62, 81, 0.10)'}}>
+                                            <h2 className="text-[22px] leading-[100%] -tracking-[0.44px] font-semibold mb-5">Balanced Units</h2>
+                                            <Image src={buImage} alt="" width={340} height={284} className="w-full"/>
+                                        </div>
+                                        <div className="px-10 py-9 rounded-[20px] bg-white" style={{border:'1px solid rgba(36, 62, 81, 0.10)'}}>
+                                            <h2 className="text-[22px] leading-[100%] -tracking-[0.44px] font-semibold mb-5">Elevation Chart</h2>
+                                            <Image src={ecImage} alt="" width={340} height={284} className="w-full"/>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>  
@@ -248,6 +306,7 @@ export default function BlogSingle(){
     )
 
 }
+
 
 
 const ExpandableText = ({ content }) => {
