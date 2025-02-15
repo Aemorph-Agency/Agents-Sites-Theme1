@@ -9,33 +9,40 @@ import 'swiper/css/navigation';
 import Image from 'next/image';
 import testpic from '../../assets/images/test-pic.png';
 import floorPlanImage from '../../assets/images/floorplan-image.png';
-import '../../styles/floorplans-carousel.css';
+import '../../styles/virtualtours.css';
 // import './styles.css';
 
 // import required modules
 // import { Pagination } from 'swiper/modules';
+import vtButton from '../../assets/images/vt-button.png';
 
 
-
-const VirtualToursCarousel=({siteplanimages})=>{
+const VirtualToursCarousel=({vtiframes})=>{
 
 
 
     return(
-       <div className='siteplan-slider relative'>
+       <div className='vt-slider relative'>
               <Swiper
                   slidesPerView={"auto"}
-                  spaceBetween={24}
+                  spaceBetween={10}
                   navigation={{
-                    nextEl: '.sitePlansNext',
-                    prevEl: '.sitePlansPrev',
+                    nextEl: '.vtNext',
+                    prevEl: '.vtPrev',
                   }}
                   modules={[Navigation]}
-                  className="mySwiper sp-Swiper"
+                  className="mySwiper vt-Swiper"
                 >
-                  {siteplanimages.map((siteplanimg, index) => (
-                    <SwiperSlide key={index} className={`sp-slide max-w-[600px]`}>
-                          <Image src={siteplanimg.images}/>
+                  {vtiframes.map((vtiframes, index) => (
+                    <SwiperSlide key={index} className={`vt-slide max-w-[400px] relative  rounded-[20px] overflow-hidden`}>
+                          <div className='vt-iframe h-[300px]  rounded-[20px] overflow-hidden'>
+                            <iframe src={vtiframes.iframe} width="100%" height="100%" frameBorder="0" allowFullScreen></iframe>
+                          </div>
+                          <div className='vt-overlay absolute top-0 left-0 w-full h-full flex items-center justify-center'>
+                              <div className='virtualButton rounded-full flex items-center justify-center'>
+                              <Image src={vtButton} alt='vt-button' />
+                              </div>
+                          </div>
                     </SwiperSlide>
                   ))}
                 </Swiper>

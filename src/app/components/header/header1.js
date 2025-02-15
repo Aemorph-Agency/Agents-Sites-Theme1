@@ -1,5 +1,8 @@
+'use client'
+import { useEffect } from "react"
 import LinkButton from "@/app/widgets/LinkButton"
-
+import { useState } from "react"
+import '../../styles/header.css'    
 
 const Header= ()=>{
 
@@ -11,8 +14,21 @@ const Header= ()=>{
 }
 
 const HeaderOne =()=>{
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return(
-        <header className="sticky top-0 h-[100px] -mb-[100px] z-50">
+        <header className={`sticky top-0 h-[100px] -mb-[100px] z-50 ${isScrolled ? 'scrolled' : ''} transition duration-300 ease-in-out`}>
             <div className="container">
                 <div className="header-wrapper flex flex-nowrap justify-between py-[31px]">
                     <div className="headerlogo">
@@ -38,7 +54,7 @@ const HeaderOne =()=>{
 const HeaderNavMenu = ()=>{
     return(
         <nav>
-            <ul className="top-menu list-none flex gap-[45px]">
+            <ul className="top-menu list-none flex gap-[45px] items-center">
                 <li>
                     <div className="has-submenu flex gap-[10px] items-center">
                         <a className="text-[13px] uppercase font-semibold">Condos in singapore</a>

@@ -1,0 +1,17 @@
+.dev-showfull::after{
+    content: "";
+    width:100%;
+    height: 117.22px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.90) 58.5%, #FFF 100%);
+    
+    position: absolute ;
+    left: 0;
+    top: -117.22px;
+}
+.developers-block:not(:last-child){
+    margin-bottom: 30px;
+}
+.developers-text{
+    max-height: 100px;
+    overflow: hidden;
+}

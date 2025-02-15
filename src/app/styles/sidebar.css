@@ -1,0 +1,22 @@
+.sidebar-cards{
+    border-radius: 20px;
+    border: 1px solid rgba(36, 62, 81, 0.08);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(37.5px);
+}
+.sidebar-cards:not(:last-child){
+    margin-bottom: 10px;
+}
+.sidebar-contactform input, textarea{
+    border: 1px solid rgba(93, 107, 119, 0.20);
+}
+.sidebarsocials{
+    border-radius: 10px;
+border: 1px solid rgba(33, 53, 91, 0.15);
+color: #21355B;
+}
+.desktop-toc {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

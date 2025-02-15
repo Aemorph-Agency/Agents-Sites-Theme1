@@ -29,6 +29,10 @@ import InfoTables from "../components/single-condos/infoTables";
 import SitePlanCarousel from "../components/single-condos/siteplan-carousel";
 import sitePlanImage from '../assets/images/siteplan.png';
 import VirtualToursCarousel from "../components/single-condos/vt-carousel";
+import developerLogo from '../assets/images/developerlogo.png';
+import '../styles/developers.css';
+import '../styles/sidebar.css';
+import CondoSidebar from "../components/single-condos/sidebar";
 
 export default function BlogSingle(){
 
@@ -120,6 +124,15 @@ export default function BlogSingle(){
         {"images": sitePlanImage},
 
     ]; 
+    const vtIframes=[
+        {"iframe": 'https://immevr.com/atlassia/360-floorplan/art-deco/art-deco.html'},
+        {"iframe": 'https://immevr.com/atlassia/360-floorplan/art-deco/art-deco.html'},
+        {"iframe": 'https://immevr.com/atlassia/360-floorplan/art-deco/art-deco.html'},
+        {"iframe": 'https://immevr.com/atlassia/360-floorplan/art-deco/art-deco.html'},
+        {"iframe": 'https://immevr.com/atlassia/360-floorplan/art-deco/art-deco.html'},
+        {"iframe": 'https://immevr.com/atlassia/360-floorplan/art-deco/art-deco.html'},
+
+    ]; 
 
     const [amenitiesExpanded, setAmenitiesExpanded] = useState(false);
 
@@ -144,19 +157,24 @@ export default function BlogSingle(){
                  </div>
 
 
-                 <div className="desktop-toc toc rounded-full p-2 gap-[5px]">
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Review</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Brochure</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Amenities</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Balanced Units</button> 
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Developer</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Elevation Chart</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Floor Plans</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Gallery</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Location</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Pricing</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Project Details</button>
-                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center"><span>#</span>Showflat</button> 
+                 <div className="desktop-toc toc rounded-full p-2  block w-auto overflow-auto">
+                     
+                       <div className="flex gap-[5px] w-auto">
+
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Review</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Brochure</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Amenities</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Balanced Units</button> 
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Developer</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Elevation Chart</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Floor Plans</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Gallery</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Location</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Pricing</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Project Details</button>
+                        <button className="px-3 py-2 toc-item bg-white rounded-full transition  duration-300 ease-in-out text-clr100 text-sm font-medium leading-[86%] -tracking-[0.14px] text-center whitespace-nowrap"><span>#</span>Showflat</button> 
+                 
+                       </div>
                  </div>
                
            </div>
@@ -164,9 +182,9 @@ export default function BlogSingle(){
 
         <section>
             <div className="container">
-                <div id="condo-article" className="flex gap-10 pt-[45px]">
+                <div id="condo-article" className="flex gap-10 pt-[45px] pb-[190px]">
                     
-                          <div>
+                          <div className="flex-1">
                                 <div id="short-desc">
                                 <div className="expandable-text">
                             <ExpandableText content={
@@ -392,11 +410,63 @@ export default function BlogSingle(){
                                             <SliderNav arrowLeftClass="vtPrev" arrowRightClass="vtNext"/>
                                         </div>  
                                     </div>                                     
-                                    <VirtualToursCarousel siteplanimages={sitePlanImages}/>
+                                    <VirtualToursCarousel vtiframes={vtIframes}/>
+                                </div>
+
+
+                                <div id="developers" className="condos-section p-10 mt-[60px]">
+                                        <h2 className="text-4xl leading-[100%] -tracking-[0.72px] font-black">Developers</h2>
+                                        <div className="divider-x w-full h-[1px] my-[30px]"></div>
+
+                                        <div className="developers-block">
+                                                <div className="flex justify-between gap-5 items-center mb-9">
+                                                    <p className="dev-name text-xl font-semibold -tracking-[0.2px] m-0 text-black">
+                                                        Parksville Development Pte Ltd (a wholly owned subsidiary of Keppel Group)
+                                                    </p>
+                                                    <div className="rounded-[10px] w-[180px] h-[100px] flex justify-center items-center" style={{border: '1px solid rgba(78, 95, 129, 0.10'}}>
+                                                        <Image src={developerLogo} alt="" width={100} height={100} />
+                                                    </div>
+                                                </div>
+                                                <div className=" relative">
+                                                    <div className="text-black text-base font-normal leading-[140%] -tracking-[0.16px] developers-text text-fade-overlay">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                    </div>
+                                                    <button className="dev-showfull flex justify-center items-center gap-[10px] text-black text-base font-semibold -tracking-[0.16px] w-full p-5 rounded-full bg-clr700 relative">
+                                                        Show Details <Icons iconName="caretDown"/>
+                                                    </button>
+                                                </div>
+                                        </div>
+
+                                        <div className="developers-block">
+                                                <div className="flex justify-between gap-5 items-center mb-9">
+                                                    <p className="dev-name text-xl font-semibold -tracking-[0.2px] m-0 text-black">
+                                                        Parksville Development Pte Ltd (a wholly owned subsidiary of Keppel Group)
+                                                    </p>
+                                                    <div className="rounded-[10px] w-[180px] h-[100px] flex justify-center items-center" style={{border: '1px solid rgba(78, 95, 129, 0.10'}}>
+                                                        <Image src={developerLogo} alt="" width={100} height={100} />
+                                                    </div>
+                                                </div>
+                                                <div className=" relative">
+                                                    <div className="text-black text-base font-normal leading-[140%] -tracking-[0.16px] developers-text text-fade-overlay">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                    </div>
+                                                    <button className="dev-showfull flex justify-center items-center gap-[10px] text-black text-base font-semibold -tracking-[0.16px] w-full p-5 rounded-full bg-clr700 relative">
+                                                        Show Details <Icons iconName="caretDown"/>
+                                                    </button>
+                                                </div>
+                                        </div>
+
                                 </div>
 
                             </div>  
-                            <div className="agent-sidebar"></div>               
+                            <div className="agent-sidebar w-[360px]">
+                                <div className="sticky top-[100px]"> 
+                                    <CondoSidebar/>
+                                </div>
+                                
+                            </div>               
                     
                 </div>
             </div>
