@@ -28,6 +28,8 @@ import GridItem from "./components/list-block-item";
 import Testimonials from "./components/testimonial-carousel";
 import Accordion from "./components/accordion";
 import BlogSingleViewBlock from "./widgets/blog-singleview-block";
+import CondosList from "./components/sections/displayNewLaunch";
+
 
 
 
@@ -72,6 +74,9 @@ export default function Home() {
         <section className="pt-[172px]">
             <div className="container">
                 <h2 className="text-center uppercase text-xl font-bold tracking-[4px] text-black opacity-[60%] mb-[60px]">Projects launching soon</h2>
+              
+              <CondosList/>
+              
                 <div className="grid grid-cols-3 gap-6">
                    
                     <PropertyGridCard propImage ={pt1} propName="Watten House" propPrice="$3M ~ $11.96M" />
