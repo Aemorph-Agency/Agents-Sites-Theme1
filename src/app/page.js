@@ -75,17 +75,9 @@ export default function Home() {
             <div className="container">
                 <h2 className="text-center uppercase text-xl font-bold tracking-[4px] text-black opacity-[60%] mb-[60px]">Projects launching soon</h2>
               
-              <CondosList/>
+                <CondosList/>
               
-                <div className="grid grid-cols-3 gap-6">
-                   
-                    <PropertyGridCard propImage ={pt1} propName="Watten House" propPrice="$3M ~ $11.96M" />
-                    <PropertyGridCard propImage ={pt2} propName="Watten House" propPrice="$3M ~ $11.96M" />
-                    <PropertyGridCard propImage ={pt3} propName="Watten House" propPrice="$3M ~ $11.96M" />
-                    <PropertyGridCard propImage ={pt4} propName="Watten House" propPrice="$3M ~ $11.96M" />
-                    <PropertyGridCard propImage ={pt5} propName="Watten House" propPrice="$3M ~ $11.96M" />
-                    <PropertyGridCard propImage ={pt6} propName="Watten House" propPrice="$3M ~ $11.96M" />
-                </div>
+              
 
                 <div className="mt-[60px] m-auto w-fit">
                 <LinkButton buttonlink="#" icon="arrowright" text="View All Launches" size="md" color="text-white" borderRadiusClass="rounded-full"/>
